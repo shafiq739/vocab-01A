@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocab Practice</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    
+    <div id="welcome-screen">
+    <h1>🎓 Welcome to WordMatch!</h1>
+    <p>Match English words with their Bangla meanings and level up!</p>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <div id="game-screen" style="display:none;">
+    <h2>Round <span id="round-number">1</span></h2>
+    <div id="match-container"></div>
+    <p id="score-display"></p> 
+    <p id="feedback-message" style="display:none;"></p>
+    <button onclick="nextRound()" id="next-btn" style="display:none;">Next Round</button>
+  </div>  
+
+  <!-- ✅ NEW: Sound effects -->
+<audio id="correct-sound" src="correct.mp3" preload="auto"></audio>
+<audio id="wrong-sound" src="wrong-answer.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script> 
+
+</body>
+</html>

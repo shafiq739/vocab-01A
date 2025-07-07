@@ -1,0 +1,121 @@
+/* 🌐 Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  background: #f0f8ff;
+  margin: 0;
+  padding: 20px;
+}
+
+#welcome-screen, #game-screen {
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* 🎮 Button Styles */
+button {
+  padding: 12px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #00b4db, #0083b0);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 300px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+}
+
+/* ✅ Matching Feedback */
+button.correct {
+  background: #4CAF50 !important;
+  color: white !important;
+}
+
+button.wrong {
+  background: #f44336 !important;
+  color: white !important;
+}
+
+button.selected {
+  background: #ffd54f !important;
+  color: #333 !important;
+}
+
+/* 🧩 Matching Layout */
+#match-container {
+  display: flex;
+  justify-content: space-between;
+    gap: 10px;
+  margin: 20px 0; 
+  flex-wrap: nowrap; 
+  overflow-x: auto;
+}
+
+.column {
+  flex: 1 1 50%; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
+  padding: 0 5px; 
+  box-sizing: border-box;
+} 
+
+/* ✅ NEW: Feedback message style */
+#feedback-message {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #f44336;
+  font-weight: bold;
+}
+
+/* 📱 Responsive Design for Small Screens */
+@media (max-width: 600px) {
+  #match-container {
+    
+    align-items: center;
+  }
+
+  
+  button {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  #welcome-screen, #game-screen {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
