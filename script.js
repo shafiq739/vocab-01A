@@ -143,7 +143,13 @@ let selected = [];
 
 const totalRounds = 20; // ✅ NEW: Total number of rounds
 const questionCount = 10; // ✅ NEW: Questions per round
-const passMark = Math.floor(questionCount * 0.8); // ✅ NEW: 80% pass mark  
+const passMark = Math.floor(questionCount * 0.8); // ✅ NEW: 80% pass mark   
+
+// ✅ NEW: Facebook browser detect
+function isFacebookBrowser() {
+  return navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV");
+}
+
 
 // ✅ NEW: Load sound elements
 const correctSound = document.getElementById("correct-sound");
@@ -152,11 +158,20 @@ const wrongSound = document.getElementById("wrong-sound");
 
 
 
-function startGame() {
+function startGame() {  
+
+   // ✅ NEW: Show warning if in Facebook browser
+  if (isFacebookBrowser()) {
+    document.getElementById("fb-warning").style.display = "block";
+    return;
+  }
+
+
   document.getElementById("welcome-screen").style.display = "none";
   document.getElementById("game-screen").style.display = "block";
   loadRound();
 }
+
 
 function loadRound() {
   document.getElementById("round-number").innerText = round;

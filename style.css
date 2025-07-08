@@ -88,7 +88,20 @@ button.selected {
   margin-top: 10px;
   color: #f44336;
   font-weight: bold;
+} 
+
+/* ✅ NEW: Facebook warning style */
+#fb-warning {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 8px;
+  color: #856404;
 }
+
+
 
 /* 📱 Responsive Design for Small Screens */
 @media (max-width: 600px) {
