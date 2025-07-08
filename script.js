@@ -148,7 +148,14 @@ const passMark = Math.floor(questionCount * 0.8); // ✅ NEW: 80% pass mark
 // ✅ NEW: Facebook browser detect
 function isFacebookBrowser() {
   return navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV");
+} 
+
+// ✅ NEW: Open in browser function
+function openInBrowser() {
+  const url = "https://shafiq739.github.io/vocab-01A/";
+  window.open(url, "_blank");
 }
+
 
 
 // ✅ NEW: Load sound elements
